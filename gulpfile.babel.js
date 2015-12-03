@@ -70,7 +70,12 @@ gulp.task('development', (done) => {
 
 gulp.task('extension', (done) => {
   // TODO detect system and Chrome path
-  const chromeBinaryPath = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+    // OSX style path
+    // const chromeBinaryPath = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+    // Ubuntu style path
+    const chromeBinaryPath = '/usr/bin/google-chrome'
 
   setTimeout(() => {
     console.log(clc.yellow(`Building extension into '${paths.releaseBuild}'`))
